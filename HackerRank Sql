@@ -1,0 +1,4 @@
+// Vowel not start and end
+SELECT DISTINCT CITY FROM STATION WHERE CITY NOT RLIKE '^[aeiouAEIOU]' 
+AND
+CITY NOT RLIKE '[aeiouAEIOU]$'
