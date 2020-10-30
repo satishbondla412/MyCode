@@ -1,0 +1,23 @@
+Sample Output
+
+Isosceles
+Equilateral
+Scalene
+Not A Triangle
+Explanation
+
+Values in the tuple  form an Isosceles triangle, because .
+Values in the tuple  form an Equilateral triangle, because . Values in the tuple  form a Scalene triangle, because .
+Values in the tuple  cannot form a triangle because the combined value of sides  and  is not larger than that of side 
+
+
+
+SELECT CASE             
+           WHEN A+B>C AND B+C>A AND A+C>B THEN
+           CASE WHEN A=B AND B=C THEN 'Equilateral'
+           WHEN A=B OR B=C OR C=A THEN 'Isosceles'
+           ELSE 'Scalene'
+                END
+            ELSE 'Not A Triangle'
+        END
+FROM TRIANGLES;
